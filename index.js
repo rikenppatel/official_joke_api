@@ -12,19 +12,11 @@ app.use((req, res, next) => {
 });
 
 app.get('/', (req, res) => {
-  res.send('Try /random_joke, /random_ten, /jokes/random, or /jokes/ten');
+  res.send('Try /jokes/random, or /jokes/ten');
 });
 
 app.get('/ping', (req, res) => {
   res.send('pong');
-});
-
-app.get('/random_joke', (req, res) => {
-  res.json(randomJoke());
-});
-
-app.get('/random_ten', (req, res) => {
-  res.json(randomTen());
 });
 
 app.get('/jokes/random', (req, res) => {
